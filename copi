@@ -1,0 +1,45 @@
+cadastro = [] # cria lista vazia
+
+while True:
+    print('[1] cadastrar cliente: ')
+    print('[2] adicionar endereço a cliente ')
+    print('[3] Mostrar dados do cliente : ')
+    print('[4] Mostrar clientes cadastrados : ')
+    print('[0] Sair : ')
+
+    opcao = int(input('Opção: '))
+
+    if opcao == 0:
+        break
+    elif opcao == 1: # cadastrar clientes
+        dados = {}
+        dados['nome'] = nome = str(input('Digite o nome da cliente: '))
+        dados['login ']= str(input('Digite o login: '))
+        dados['senha ']= str(input('Digite a senha: '))
+        dados['data_nascimento '] = int(input('Digite a data de nascimento: '))
+        dados['telefone ']= int(input('Digite o número de telefone: '))
+        cadastro.append(dados)
+        print(cadastro)
+
+    if opcao == 2:  # adicionar endereço a cliente
+        dados = {}
+        dados['rua'] = str(input('Digite a rua onde mora o cliente: '))
+        dados['numero'] = int(input('Digite o número da residência: ' ))
+        dados['complemento'] = str(input('Digite um complemento: '))
+        dados['bairro'] = str(input('Digite o bairro: '))
+        dados['cidade'] = str(input('Digite a cidade: '))
+        dados['cep'] = int(input('Digite o CEP: '))
+        dados['ponto_referencia'] = str(input('Digite um ponto de referência: '))
+        cadastro.append(dados)
+        print(cadastro)
+
+    elif opcao == 3: #Mostrar dados do cliente
+        nome= str(input('Digite o login do cliente: '))
+        for nome in cadastro:
+            print(nome)
+            break
+        else:
+            print('pessoa não cadastrada. ')
+
+    elif opcao == 4:
+        print(cadastro)
